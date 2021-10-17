@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 3</title>
+</head>
+
+<body id="tema" tema="">
+    <div class="theme">
+        <label>select theme : </label>
+        <select name="theme" onchange="ubahtema()">
+            <option>white</option>
+            <option>black</option>
+        </select>
+
+        <script>
+            function ubahtema(){
+                var t = document.getElementById("tema");       
+                if (t.style.backgroundColor != "black"){
+                    t.style.backgroundColor = "black";
+                    t.style.color = "white";
+                } else if(t.style.backgroundColor != "white"){
+                    t.style.backgroundColor = "white";
+                    t.style.color = "black";
+                }
+            } 
+        </script>
+    </div><br>
+    
+    <h1>This is my website</h1><br>
+    
+    <div>
+        <label>Select the weather type today : </label>
+        <select name="weather" id="weather" weather="" onchange="cuaca()">
+            <option value="sunny">sunny</option>
+            <option value="rainy">rainy</option>
+        </select>
+        <p id="note" note="">It is nice and sunny outside today. Wear shorts! Go to the beach, or the park and get an ice cream.</p>
+
+        <script>
+            function cuaca(){
+                var note = document.getElementById("note");
+                var w = document.getElementById("weather");
+                var value = w.options[w.selectedIndex].value;
+        
+                if (value == "rainy"){
+                    note.innerText = "Rain is falling Outside; take a rain coat and brolly; and don't stay out for too long.";
+                } else if (value == "sunny"){
+                    note.innerText = "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park and get an ice cream.";
+                }
+            }
+        </script>
+    </div>
+    <div>
+        <form>
+            <label>Input number : </label><input id="input" type="text"><input type="button" value="Get Factorial" onclick="faktorial()">
+        </form>
+        <p id="hasil"></p>
+
+        <script>
+            function faktorial(){
+                var n = document.getElementById("input").value;
+                var hasil = document.getElementById("hasil");
+	            var faktor=1;
+
+	            for(x=n; x>0n; x--){
+                    faktor=faktor*x;
+                }
+                hasil.innerText = "The factorial of " + n + " is " + faktor;
+            }
+        </script>
+    </div>
+    
+</body>
+</html>
