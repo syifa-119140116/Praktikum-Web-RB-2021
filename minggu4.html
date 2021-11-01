@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="setting.js"></script>
+</head>
+<body>
+    <div id="top">
+        <h1>Data Mahasiswa Institut Teknologi Sumatera</h1>
+    </div>
+    <div class="isi">
+        <fieldset>
+            <legend>Isikan Data Diri Disini</legend>
+                <form method="post" id="form_mahasiswa">
+                <input type="text" name="nim" placeholder="NIM">
+                <input type="text" name="nama" placeholder="Nama"><br>
+                <input type="text" name="prodi" placeholder="Program Studi">
+                <input type="text" name="angkatan" placeholder="Angkatan"><br>
+                <input type="button" id="btn_tampil" value="Submit">
+                <input type="button" id="edit" value="Edit" hidden>
+                <input type="button" id="batal" value="Batal" hidden>
+                </form>
+        </fieldset>
+    </div>
+    <h3>Daftar Mahasiswa</h3>
+    <div id="tampil_data"></div>
+    <script>
+        $(document).ready(function(){
+            $('#tampil_data').load("tampil.php");
+            $('#btn_tampil').click(function(){
+                var data = $('#form_mahasiswa').serialize();
+                $.ajax({
+                    type : 'POST',
+                    url : "tambah.php",
+                    data : data,
+                    cache : false,
+                    success : function(data){
+                        $('#tampil_data').load(tampil.php);
+                    }
+                });
+            });
+        });
+    </script>
+    <br>
+    <footer><p>@Copyright Syifa Syauqiyah</p></footer>
+</body>
+</html>
