@@ -3,8 +3,8 @@
     echo "bilangan prima 1-50";
     echo "<br>"; echo "<br>";
 
-    function prima($i,$j){
-        for($i=1;$i<=50;$i++){
+    function prima($a,$b){
+        for($i=$a;$i<=$b;$i++){
             $bil=0;
             for($j=1;$j<=$i;$j++){
                 if($i%$j==0){
@@ -17,8 +17,6 @@
             }
         }
     }
-    prima(1,50);
-
-    
+    prima(1,50); 
 ?>
 
