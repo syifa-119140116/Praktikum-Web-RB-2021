@@ -1,7 +1,7 @@
 <?php
 include "koneksi.php";
-$id = $_POST["nim"];
+$id = $_GET["id"];
 
-$sql = "delete from mahasiswa where nim='".$nim."'";
+$sql = "delete from toko_roti where id='".$id."'";
 $hasil = mysqli_query($kon,$sql);
 ?>

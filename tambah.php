@@ -2,13 +2,13 @@
 //include file koneksi ke database
 include "koneksi.php";
 //menerima nilai dari kiriman form
-$nim=$_POST["nim"];
-$nama=$_POST["nama"];
-$prodi=$_POST["prodi"];
-$angkatan=$_POST["angkatan"];
+$id=$_POST["id"];
+$tawar=$_POST["tawar"];
+$cokelat=$_POST["cokelat"];
+$keju=$_POST["keju"];
 
 //Query input menginput data kedalam tabel mahasiswa
-$sql="insert into mahasiswa (nim,nama,prodi,angkatan) values('$nim','$nama','$prodi','$angkatan')";
+$sql="insert into toko_roti (id,tawar,cokelat,keju) values('$id','$tawar','$cokelat','$keju')";
 
 //mengeksekusi/menjalankan query diatas
 $hasil=mysqli_query($kon,$sql);

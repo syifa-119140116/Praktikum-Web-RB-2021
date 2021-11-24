@@ -1,15 +1,14 @@
 *{
     margin: 0;
-    font-family:'Times New Roman'
+    font-family: century gothic;
 }
 body{
     background-color: #FBF7F0;
 }
 #top{
-    background-color: #555555;
+    background-color: cadetblue;
 }
 h1{
-    font-family:'Times New Roman';
     color: #FBF7F0;
     padding: 3%;
 }
@@ -24,26 +23,26 @@ legend{
     padding: 1%;
     font-size: 20px;
     color: #FBF7F0;
-    background-color:#555555;
+    background-color:cadetblue;
 }
 .isi input{
     padding: 1%;
     margin: 1% 1% 1% 9% ;
     width: 35%;
-    border-color: #555555;
+    border-color: cadetblue;
     box-sizing: border-box;
 }
 .isi select{
     padding: 1%;
     margin: 1% 1% 1% 9% ;
     width: 35%;
-    border-color: #555555;
+    border-color: cadetblue;
 }
 #btn_tampil{
     padding: 1%;
     margin-left: 32%;
     width: 35%;
-    border-color: #555555;
+    border-color: cadetblue;
     box-sizing: border-box;
 }
 h3{
@@ -51,7 +50,7 @@ h3{
     padding: 1%;
     text-align: center;
     color: #FBF7F0;
-    background-color: #555555;
+    background-color: cadetblue;
 }
 #tabeldata{
     margin-top: 3%;
@@ -63,13 +62,13 @@ h3{
 }
 #tabeldata, tr, th{
     padding: 30px;
-    background-color: #555555;
+    background-color: cadetblue;
     color: #FBF7F0;
 }
 #tabeldata, tr, td{
     padding: 30px;
     background-color: #CDC9C3;
-    color: #555555;;
+    color: black;
 }
 #tbl_edit{
     width: 100%;
@@ -82,5 +81,5 @@ h3{
 footer{
     padding: 1%;
     color: #FBF7F0;
-    background-color:#555555 ;
+    background-color:cadetblue;
 }

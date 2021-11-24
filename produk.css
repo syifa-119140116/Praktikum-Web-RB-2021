@@ -1,0 +1,30 @@
+header{
+    background-color: cadetblue;
+    color: aliceblue;
+    font-family: century gothic;
+    padding: 2%;
+}
+button{
+    margin-top: 4%;
+    margin-right: 4%;
+    float: right;
+    background-color: aliceblue;
+    padding: 1%;
+}
+table{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+table tr th{
+    padding: 1% 1% 1% 1%;
+    width: 1%;
+}
+table tr td{
+    padding-left: 9%; 
+}
+img{
+    width: 200px;
+
+}

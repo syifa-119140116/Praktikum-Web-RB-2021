@@ -1,23 +1,23 @@
 <table id="tabeldata">
         <tr>
-            <th>NIM</th>
-            <th>Nama</th>
-            <th>Prodi</th>
-            <th>Angkatan</th>
-            <th>CRUD</th>
+            <th>ID</th>
+            <th>Roti Tawar</th>
+            <th>Roti Cokelat</th>
+            <th>Roti Keju</th>
+            <th>&nbsp;</th>
         </tr>
         <?php
         include "koneksi.php";
-        $hasil=mysqli_query($kon,"select * from mahasiswa order by nim asc");
+        $hasil=mysqli_query($kon,"select * from toko_roti order by id asc");
 
         while($data = mysqli_fetch_array($hasil)):
         ?>
         <tr>
-            <td><?php echo $data['nim']; ?></td>
-            <td><?php echo $data['nama']; ?></td>
-            <td><?php echo $data['prodi']; ?></td>
-            <td><?php echo $data['angkatan']; ?></td>
-            <td><input id="btn_edit" type="button" value="Edit"><br><input id="btn_hapus" type="button" value="Hapus"></td>
+            <td><?php echo $data['id']; ?></td>
+            <td><?php echo $data['tawar']; ?></td>
+            <td><?php echo $data['cokelat']; ?></td>
+            <td><?php echo $data['keju']; ?></td>
+            <td><input id="btn_edit" type="button" value="Edit"><br><button type="submit" id="btn_hapus"><a <?php echo "href='hapus.php?id=".$data['id']."'";?> >Hapus</a></button></td>
         </tr>
         <?php endwhile; ?>
 </table>
@@ -28,24 +28,9 @@
         $('#tabeldata').on('click','#btn_edit',function(){
             $('html, body').animate({scrollTop: 0});
             var baris = $(this).closest('tr').find("td:first").html();
-            $('#nim').val(baris);
+            $('#id').val(baris);
             $('#edit').show();
             $('#batal').show();
-            $('#nim').show();
-        });
-
-        $('#tabeldata').on('click','#btn_hapus', function(){
-            var id = $(this).closest('tr').find("td:first").html();
-            var data = {nim:baris};
-            $.ajax({
-                type : "POST",
-                url : "hapus.php",
-                data : data,
-                cache : false,
-                success : function(data){
-                    $('#tampil_data').load("tampil.php");
-                }
-            });
-        });      
+        });    
     });
 </script>
